@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>글 쓰기</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}"
+          rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid mt-3">
-    <form class="hs input-group d-flex flex-column" action="">
-        <label class="form-label">
-            <input type="text" class="form-control" placeholder="제목"/>
+<div class="container-fluid">
+    <form class="input-group d-flex flex-column vh-100" th:action="post">
+        <label class="form-label mt-2">
+            <input type="text" class="form-control" th:field="title" placeholder="제목"/>
         </label>
         <label class="form-label flex-fill">
-            <textarea class="form-control" placeholder="본문 작성"></textarea>
+            <textarea class="form-control" th:field="contents" placeholder="본문 작성"></textarea>
         </label>
         <label class="form-label">
-            <input type="password" class="form-control" placeholder="4자리 암호 입력" maxlength="4"/>
+            <input type="password" class="form-control" th:field="passwd"
+                   placeholder="4자리 암호 입력" maxlength="4"/>
         </label>
         <label class="form-label">
             <button class="btn btn-primary form-control" type="submit">작성하기</button>
         </label>
         <label class="form-label">
-            <button class="btn btn-outline-secondary form-control" type="submit">취소</button>
+            <button class="btn btn-outline-secondary form-control" type="button"
+                    th:onclick="|location.href='/'|">취소</button>
         </label>
     </form>
 </div>
 
-<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"
+        th:src="@{/js/bootstrap.bundle.js}"></script>
 </body>
 <style>
-    .hs {
-        height: 97vh;
-    }
-
     textarea {
         resize: none;
         height: 100%;

@@ -12,7 +12,10 @@ public class webConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.
-                addResourceHandler("/resources/**")
-                .addResourceLocations("classpath:/resources/templates/**");
+                addResourceHandler("/**")
+                .addResourceLocations("classpath:/templates/")
+                .setCachePeriod(0);
     }
+
+
 }

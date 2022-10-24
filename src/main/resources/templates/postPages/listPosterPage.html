@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>전체 게시글</title>
+    <link href="../css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}"
+          rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="d-flex flex-column vh-100">
+        <div class="dropdown align-self-end mt-2">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                # 사용자이름
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#"># 작성글</a></li>
+                <li><a class="dropdown-item" href="#"># 로그아웃</a></li>
+            </ul>
+        </div>
+        <label class="d-grid mt-2">
+            <button class="btn btn-primary btn-lg" type="button"
+                    onclick="location.href='./createPostPage.html'"
+                    th:onclick="|location.href='/posters'|">글 쓰기</button>
+        </label>
+        <div class="vh-100 mt-2">
+            <table class="table">
+                <thead class="table-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">날짜</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <nav aria-label="Page navigation" class="align-self-center">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <span class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </span>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link" href="#">1</span>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="../js/bootstrap.bundle.min.js"
+        th:src="@{/js/bootstrap.bundle.js}"></script>
+</body>
+</html>
