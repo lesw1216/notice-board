@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>전체 게시글</title>
+    <link href="../css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}"
+          rel="stylesheet">
 </head>
 <body>
+<div class="container-fluid">
+    <div class="input-group d-flex flex-column vh-100">
 
+        <div class="mt-2">
+            <label>
+                <input type="text" class="form-control" value="작성자 이름" readonly>
+            </label>
+            <label>
+                <input type="date" class="form-control" value="날짜" readonly>
+            </label>
+            <label>
+                <button class="btn-sm btn-secondary form-control" type="button"
+                        th:onclick="|location.href=''|">수정
+                </button>
+            </label>
+        </div>
+
+        <label class="mt-2">
+            <input type="text" class="form-control" value="제목" readonly>
+        </label>
+
+        <label class="flex-fill mt-2">
+            <textarea class="form-control h-100" placeholder="본문" readonly style="resize: none"></textarea>
+        </label>
+        <div>
+            <button class="btn btn-primary mt-2 mb-2 form-control" type="button"
+                    th:onclick="|location.href='/posters/lists'|">목록으로
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<script src="../js/bootstrap.bundle.min.js"
+        th:src="@{/js/bootstrap.bundle.js}"></script>
 </body>
+<style>
+</style>
 </html>
