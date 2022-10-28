@@ -31,12 +31,13 @@ public class PostController {
      */
     @GetMapping("/posters")
     public String createPostForm() {
+
         return "postPages/createPostPage";
     }
 
     /*
         전체 게시물 페이지로 이동
-        URL 패턴 "/", 고려 해볼 점 : "/posters/list"로 수정?
+        URL 패턴 "/posters/list"
         요청 : GET
      */
     @GetMapping("/posters/lists")
@@ -57,6 +58,8 @@ public class PostController {
         /*
             URL id 받아서, 해당 DB id에 맞는 게시글 가져온다?
             전체 리스트 목록에서 화면에는 보여주지 않지만 ID 까지 끌어 오면 될까?
+            수정페이지, 읽기 페이지로 이동할 지 결정.
+            그러면 수정페이지 이동 요청시 딸려오는 데이터가 필요?
          */
         return "/postPages/readPostPage";
     }
