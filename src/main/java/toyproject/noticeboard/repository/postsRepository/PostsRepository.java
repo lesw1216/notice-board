@@ -1,18 +1,18 @@
-package toyproject.noticeboard.repository;
+package toyproject.noticeboard.repository.postsRepository;
 
 import toyproject.noticeboard.domain.Posts;
 
 public interface PostsRepository {
 
     // 저장
-    void save(Posts posts);
+    void create(Posts posts);
 
     // 게시글 id로 조회
-    Posts findById(Long id);
+    Posts read(Long id);
 
     // 게시글 id로 삭제
-    void delete(Long id);
+    void drop(Long id);
 
     // 게시글 수정
-    Posts updateById(Posts posts);
+    Posts update(Posts posts);
 }
