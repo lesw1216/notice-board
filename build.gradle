@@ -25,9 +25,12 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+	// spring security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 	// mysql
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.7.5'
+//	implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.7.5'
 }
 
 tasks.named('test') {

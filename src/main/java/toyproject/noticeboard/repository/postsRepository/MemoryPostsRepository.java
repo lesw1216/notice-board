@@ -1,7 +1,6 @@
 package toyproject.noticeboard.repository.postsRepository;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Repository;
 import toyproject.noticeboard.domain.Posts;
 
