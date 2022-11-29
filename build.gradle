@@ -31,6 +31,11 @@ dependencies {
 	// mysql
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
 //	implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.7.5'
+
+	// 롬복 테스트 환경에서 사용하기
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+
 }
 
 tasks.named('test') {
