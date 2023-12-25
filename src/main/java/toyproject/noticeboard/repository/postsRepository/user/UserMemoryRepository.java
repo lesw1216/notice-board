@@ -1,12 +1,13 @@
 package toyproject.noticeboard.repository.postsRepository.user;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Repository;
 import toyproject.noticeboard.domain.User;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 @Slf4j
+@Repository
 public class UserMemoryRepository implements UserRepository{
 
     private final HashMap<String, User> userStore = new HashMap<>();
